@@ -1,0 +1,19 @@
+<div class="todos">
+
+        <input 
+            type="text"
+           [(ngModel)]="newTodo"
+        />
+        <button type="submit" (click)="addTodo()">Hinzufügen</button>
+    
+
+
+    <div *ngIf="todos && todos.length > 0">
+        <div *ngFor="let todo of todos; let i = index" class="todo {{ (todo.completed ? 'done' : '' )}}" >
+            <div class="id">{{ i }}</div>
+            <div class="content">{{todo.content}}</div>
+            <button class="delete" (click)="toggleCompleted(i)">Erledigt</button>
+        </div>
+    </div>   
+    <div class="todo" *ngIf="!todos || todos.length === 0">Die Aufgabenliste ist noch leer<div>    
+</div>

@@ -1,0 +1,28 @@
+.todos {
+    max-width: 25rem;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+}
+
+.todo.done .content,
+.todo.done .id {
+text-decoration: line-through;
+color: red;
+}
+
+.id {
+    padding-right: .2rem ;
+}
+
+.content {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+.delete {
+    margin-left: 1rem;
+}
